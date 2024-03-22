@@ -1,3 +1,52 @@
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10vh;
+  z-index: 10;
+  justify-content: space-between !important;
+  h1{
+    padding-left: 50px;
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    font-weight: 900;
+    color: orange;
+    cursor: pointer;
+    z-index: 100;
+    span{
+      color: transparent;
+      -webkit-text-stroke: 1px orange;
+    }
+  }
+  .navs{
+    padding-right: 50px;
+    ul{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      list-style: none;
+      color: white;
+      li{
+        font-size: 1.2rem;
+        cursor: pointer;
+        button{
+          width: 120px;
+          height: 50px;
+          border: none;
+          background: orange;
+          color: white;
+          text-transform: uppercase;
+          font-weight: 900;
+          border: 1px solid;
+          cursor: pointer;
+          border-radius: 25px;
+        }
+      }
+    }
+  }
+}
 
 .hero-wrap {
   background: white;
@@ -94,7 +143,7 @@
   width: 80%;
   background: transparent;
   position:fixed;
-  top: 0;
+  bottom: 5px;
   left: 0;
   margin-left: 10%;
   .progress-bar {
@@ -106,8 +155,6 @@
     width: 0;
   }
 }
-
-
 
 .hero-wrap::after {
   content: "";
@@ -150,6 +197,8 @@
     .card {
       width: 350px;
       height: 300px;
+      border: 1px solid orange;
+      border-radius: 20px;
       cursor: pointer;
       img {
         width: 150px;
@@ -170,9 +219,6 @@
         color: white;
         font-size: 1.2rem;
       }
-    }
-    .card:not(:last-child){
-      border-right: 1px solid rgba(255, 166, 0, 0.5);
     }
     .card:hover {
       border: none;
@@ -262,8 +308,22 @@
       margin-top: 20px;
       text-transform: capitalize;
     }
+    button{
+      width: 250px;
+      height: 60px;
+      border: none;
+      background: orange;
+      border-radius: 30px;
+      margin-top: 30px;
+      text-transform: capitalize;
+      font-size: 1rem;
+      color: white;
+      font-weight: 900;
+      cursor: pointer;
+    }
   }
 }
+
 .btn-top {
   width: 50px;
   height: 50px;
@@ -276,4 +336,13 @@
   border-radius: 50px;
   cursor: pointer;
   overflow: hidden;
+}
+
+.footer{
+  width: 100%;
+  height: 30vh;
+  background: #111;
+  color: white;
+  gap: 10px;
+  text-transform: capitalize;
 }

@@ -1,7 +1,6 @@
 import Aos from "aos";
 import "./App.css";
 import "./styles/home.scss";
-import { useState } from "react";
 import { FaFacebook, FaTwitter, FaYoutube } from "react-icons/fa";
 
 function App() {
@@ -18,11 +17,29 @@ function App() {
     progress >= 15
       ? (document.getElementById("goToTopBtn").style.display = "flex")
       : (document.getElementById("goToTopBtn").style.display = "none");
+
+      progress >= 35
+      ? (document.getElementById("list").style.color = "orange")
+      : (document.getElementById("list").style.color = "white");
   }
   Aos.init();
   return (
     <>
       <div className="main-wrap flex col">
+      <div className="header flex">
+        <h1><span>Fit</span>nastic</h1>
+        <div className="navs">
+          <ul id="list">
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+            <li>Locations</li>
+            <li>
+              <button>Login</button>
+            </li>
+          </ul>
+        </div>
+      </div>
         <div className="progress-container">
           <div className="progress-bar" id="myBar"></div>
         </div>
@@ -145,11 +162,8 @@ function App() {
               With their expert guidance and individualized approach, they
               inspire, motivate, and empower individuals to surpass their
               limits, redefine their potential, and embark on a journey of
-              self-discovery and physical empowerment. Our team of exceptional
-              trainers stands as a beacon of excellence, embodying the ethos of
-              our gym: to provide not just a place to work out, but a supportive
-              community where dreams are realized, obstacles are overcome, and
-              aspirations are turned into reality, one rep at a time.
+              self-discovery and physical empowerment. 
+              <button>See Pricing</button>
             </p>
           </div>
         </div>
@@ -159,6 +173,10 @@ function App() {
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
           &#x2191;
+        </div>
+        <div className="footer flex col">
+          <p className="flex">&copy; Copyright All Rights Reserved</p>
+          <h1>Fitnastic</h1>
         </div>
       </div>
     </>
